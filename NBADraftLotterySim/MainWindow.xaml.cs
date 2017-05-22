@@ -29,16 +29,19 @@ namespace NBADraftLotterySim
 
         private void lottoGenBtn_Click(object sender, RoutedEventArgs e)
         {
-            // Change label to a random value of the lotto balls array.
-            mainLabel.Content = randArrayVal(lottoBalls);
+            // Create a new Combination.
+            Combination combo = new Combination();
+
+            // Change label to a randomly generated Combination.
+            mainLabel.Content = Combination.printCombination(combo);
         }
         
         // Method ensures a random value is picked from the array of lottery balls.
         private int randArrayVal(int[] arr)
         {
-            int len = arr.Length + 1;
+            int len = arr.Length;
             Random rnd = new Random();
-            int index = rnd.Next(1, len);
+            int index = rnd.Next(0, len);
             return arr[index];
         }
     }
