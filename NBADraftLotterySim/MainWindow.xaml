@@ -8,7 +8,7 @@
         Title="NBA Draft Lottery Simulator" Height="600" Width="800">
     <Grid>
         <Button x:Name="lottoGenBtn" Content="Generate Lottery" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Click="lottoGenBtn_Click"/>
-        <Label x:Name="mainLabel" Content="Label" Margin="0,0,0,50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="36"/>
+        <Label x:Name="mainLabel" Content="Label" Margin="0,0,0,50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
