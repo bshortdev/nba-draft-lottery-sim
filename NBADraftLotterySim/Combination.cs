@@ -20,6 +20,8 @@ namespace NBADraftLotterySim
 
         private int fourthVal { get; set; }
 
+        private Team team { get; set; }
+
         public Combination()
         {
             // Create a new Combination.
