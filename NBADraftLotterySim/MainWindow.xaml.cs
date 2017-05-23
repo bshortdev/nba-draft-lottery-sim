@@ -34,8 +34,13 @@ namespace NBADraftLotterySim
 
             // Change label to a randomly generated Combination.
             mainLabel.Content = Combination.printCombination(combo);
+
+            // Testing Combination Methods
+            //Combination test1 = new Combination(1, 2, 3, 4);
+            //Combination test2 = new Combination(2, 6, 3, 4);
+            //mainLabel.Content = Combination.equalCombination(test1, test2);
         }
-        
+
         // Method ensures a random value is picked from the array of lottery balls.
         private int randArrayVal(int[] arr)
         {

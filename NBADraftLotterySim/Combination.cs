@@ -24,6 +24,14 @@ namespace NBADraftLotterySim
             generateCombination();
         }
 
+        public Combination(int a, int b, int c, int d)
+        {
+            firstVal = a;
+            secondVal = b;
+            thirdVal = c;
+            fourthVal = d;
+        }
+
         public void generateCombination()
         {
             // Create a set of booleans to check the uniqueness of the values.
@@ -63,6 +71,28 @@ namespace NBADraftLotterySim
                     fourthValValid = true;
                 }
             }
+        }
+
+        // Compares 2 Combinations to see if they are equivalent.
+        public static bool equalCombination(Combination compared, Combination comparedTo)
+        {
+            bool isEqual = false;
+            if (findValue(compared.firstVal, comparedTo) && findValue(compared.secondVal, comparedTo) && findValue(compared.thirdVal, comparedTo) && findValue(compared.fourthVal, comparedTo))
+            {
+                isEqual = true;
+            }
+            return isEqual;
+        }
+
+        // Looks through a Combination to find the value passed to it.
+        private static bool findValue(int value, Combination combo)
+        {
+            bool isValue = false;
+            if(value == combo.firstVal || value == combo.secondVal || value == combo.thirdVal || value == combo.fourthVal)
+            {
+                isValue = true;
+            }
+            return isValue;
         }
 
         // Prints the 4 values of the Combination
