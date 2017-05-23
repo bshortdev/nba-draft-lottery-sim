@@ -8,8 +8,8 @@ namespace NBADraftLotterySim
 {
     class Team
     {
-        private string teamName { get; set; }
-        private int lotteryOdds { get; set; }
+        public string teamName { get; set; }
+        public int lotteryOdds { get; set; }
 
         public Team(string name, int odds)
         {
