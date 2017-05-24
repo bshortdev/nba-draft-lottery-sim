@@ -51,11 +51,22 @@ namespace NBADraftLotterySim
             {
                 lotteryPool = shuffleLottery(lotteryPool);
             }
-            mainLabel.Content = lotteryPool[0].team.teamName;
+            string pick = pullCombo(lotteryPool).team.teamName;
+            mainLabel.Content = "The number one pick belongs to the " + pick;
             //int ind = Convert.ToInt32(test_txtBox.Text);
             //mainLabel.Content = lotteryPool[ind].team.teamName;
         }
 
+        // Pull a random combination value from the array of Combinations
+        private Combination pullCombo(Combination[] combo)
+        {
+            Random rnd = new Random();
+            int index = rnd.Next(0, combo.Length);
+            Combination pull = combo[index];
+            return pull;
+        }
+
+        // Shuffles the array of Combinations
         private Combination[] shuffleLottery(Combination[] combo)
         {
             Random rnd = new Random();
