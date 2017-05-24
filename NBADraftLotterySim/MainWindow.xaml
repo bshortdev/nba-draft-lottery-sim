@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="NBA Draft Lottery Simulator" Height="600" Width="800">
     <Grid>
-        <Button x:Name="lottoGenBtn" Content="Generate Lottery" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Click="lottoGenBtn_Click"/>
-        <Label x:Name="mainLabel" Content="Label" Margin="0,0,0,50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        
+        <Button x:Name="lottoGenBtn" Content="Generate Lottery" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Center" Click="lottoGenBtn_Click"/>
+        <Label x:Name="mainLabel" Content="Label" Margin="146,33,146,280" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="260"/>
+
         <!--Test Textbox for working with array values.-->
         <!--<TextBox x:Name="test_txtBox" HorizontalAlignment="Center" Height="23" Margin="0,250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>-->
 
