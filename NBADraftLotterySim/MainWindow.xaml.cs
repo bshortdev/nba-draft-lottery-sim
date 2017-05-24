@@ -51,8 +51,18 @@ namespace NBADraftLotterySim
             {
                 lotteryPool = shuffleLottery(lotteryPool);
             }
-            string pick = pullCombo(lotteryPool).team.teamName;
-            mainLabel.Content = "The number one pick belongs to the " + pick;
+            string firstPick = pullCombo(lotteryPool).team.teamName;
+            bool secondPickCtrl = false;
+            string secondPick = "";
+            while (!secondPickCtrl)
+            {
+                secondPick = pullCombo(lotteryPool).team.teamName;
+                if(!secondPick.Equals(firstPick))
+                {
+                    secondPickCtrl = true;
+                }
+            }
+            mainLabel.Content = "The number one pick belongs to the " + firstPick + Environment.NewLine + "The number two pick belongs to the " + secondPick;
             //int ind = Convert.ToInt32(test_txtBox.Text);
             //mainLabel.Content = lotteryPool[ind].team.teamName;
         }
