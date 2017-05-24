@@ -62,7 +62,17 @@ namespace NBADraftLotterySim
                     secondPickCtrl = true;
                 }
             }
-            mainLabel.Content = "The number one pick belongs to the " + firstPick + Environment.NewLine + "The number two pick belongs to the " + secondPick;
+            bool thirdPickCtrl = false;
+            string thirdPick = "";
+            while (!thirdPickCtrl)
+            {
+                thirdPick = pullCombo(lotteryPool).team.teamName;
+                if (!thirdPick.Equals(firstPick) && !thirdPick.Equals(secondPick))
+                {
+                    thirdPickCtrl = true;
+                }
+            }
+            mainLabel.Content = "The number one pick belongs to the " + firstPick + Environment.NewLine + "The number two pick belongs to the " + secondPick + Environment.NewLine + "The number three pick belongs to the " + thirdPick;
             //int ind = Convert.ToInt32(test_txtBox.Text);
             //mainLabel.Content = lotteryPool[ind].team.teamName;
         }
