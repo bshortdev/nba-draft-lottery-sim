@@ -44,10 +44,33 @@ namespace NBADraftLotterySim
             //mainLabel.Content = lotteryPool.Length;
 
             // Testing Teams
+            Combination[] lotteryPool = Combination.makeLotteryPool();
             Team[] lotto2015 = lottery2015();
-            mainLabel.Content = lotto2015[3].teamName;
+            lotteryPool = assignTeams(lotteryPool, lotto2015);
+            mainLabel.Content = lotteryPool[999].team.teamName;
+            //int ind = Convert.ToInt32(test_txtBox.Text);
+            //mainLabel.Content = lotteryPool[ind].team.teamName;
         }
 
+        // Assigns the teams to lottery combinations in the array based on lotery odds.
+        private Combination[] assignTeams(Combination[] combo, Team[] lotto)
+        {
+            int index = 0;
+            int counter = 0;
+            foreach(Combination c in combo)
+            {
+                if(counter >= lotto[index].lotteryOdds)
+                {
+                    index++;
+                    counter = 0;
+                }
+                c.team = lotto[index];
+                counter++;
+            }
+            return combo;
+        }
+
+        // An array of Teams from the 2015 Draft Lottery
         private Team[] lottery2015()
         {
             return new Team[] { new Team("Minnesota Timberwolves", 250),
