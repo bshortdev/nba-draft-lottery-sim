@@ -47,9 +47,19 @@ namespace NBADraftLotterySim
             Combination[] lotteryPool = Combination.makeLotteryPool();
             Team[] lotto2015 = lottery2015();
             lotteryPool = assignTeams(lotteryPool, lotto2015);
-            mainLabel.Content = lotteryPool[999].team.teamName;
+            for(int i = 0; i< 20; i++)
+            {
+                lotteryPool = shuffleLottery(lotteryPool);
+            }
+            mainLabel.Content = lotteryPool[0].team.teamName;
             //int ind = Convert.ToInt32(test_txtBox.Text);
             //mainLabel.Content = lotteryPool[ind].team.teamName;
+        }
+
+        private Combination[] shuffleLottery(Combination[] combo)
+        {
+            Random rnd = new Random();
+            return combo.OrderBy(x => rnd.Next()).ToArray();
         }
 
         // Assigns the teams to lottery combinations in the array based on lotery odds.
