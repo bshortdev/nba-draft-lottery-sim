@@ -114,20 +114,20 @@ namespace NBADraftLotterySim
         // An array of Teams from the 2015 Draft Lottery
         private Team[] lottery2015()
         {
-            return new Team[] { new Team("Minnesota Timberwolves", 250),
-                new Team("New York Knicks", 199),
-                new Team("Philadelphia 76ers", 156),
-                new Team("Los Angeles Lakers", 119),
-                new Team("Orlando Magic", 88),
-                new Team("Sacramento Kings", 63),
-                new Team("Denver Nuggets", 43),
-                new Team("Detroit Pistons", 28),
-                new Team("Charlotte Hornets", 17),
-                new Team("Miami Heat", 11),
-                new Team("Indiana Pacers", 8),
-                new Team("Utah Jazz", 7),
-                new Team("Phoenix Suns", 6),
-                new Team("Oklahoma City Thunder", 5) };
+            return new Team[] { new Team("Minnesota Timberwolves", 250, 1),
+                new Team("New York Knicks", 199, 2),
+                new Team("Philadelphia 76ers", 156, 3),
+                new Team("Los Angeles Lakers", 119, 4),
+                new Team("Orlando Magic", 88, 5),
+                new Team("Sacramento Kings", 63, 6),
+                new Team("Denver Nuggets", 43, 7),
+                new Team("Detroit Pistons", 28, 8),
+                new Team("Charlotte Hornets", 17, 9),
+                new Team("Miami Heat", 11, 10),
+                new Team("Indiana Pacers", 8, 11),
+                new Team("Utah Jazz", 7, 12),
+                new Team("Phoenix Suns", 6, 13),
+                new Team("Oklahoma City Thunder", 5, 14) };
         }
 
         // Method ensures a random value is picked from the array of lottery balls.
