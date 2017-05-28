@@ -14,5 +14,11 @@ namespace NBADraftLotterySim
         {
             results = new List<Lottery>();
         }
+
+        // Sorts results in descending order by number of outcomes.
+        public void sortResults()
+        {
+            results = results.OrderByDescending(r => r.outcomes).ToList();
+        }
     }
 }
