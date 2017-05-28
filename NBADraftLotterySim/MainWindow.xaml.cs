@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace NBADraftLotterySim
 {
@@ -27,11 +28,25 @@ namespace NBADraftLotterySim
 
         private void lottoGenBtn_Click(object sender, RoutedEventArgs e)
         {
+            // Timer to track amount of time has passed.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            
             // Create new Lottery.
             Lottery newLotto = new Lottery(2015);
 
             // Print the Lottery
             mainLabel.Content = newLotto.printLottery();
+            
+            stopWatch.Stop();
+            // Get the elapsed time as a TimeSpan value.
+            TimeSpan ts = stopWatch.Elapsed;
+
+            // Format and display the TimeSpan value.
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                ts.Hours, ts.Minutes, ts.Seconds,
+                ts.Milliseconds / 10);
+            timerLbl.Content = "RunTime " + ts.Milliseconds + " milliseconds";
         }        
     }
 }
