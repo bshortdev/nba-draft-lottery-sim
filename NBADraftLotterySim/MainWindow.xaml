@@ -12,7 +12,7 @@
         <Label x:Name="timerLbl" Content="Time Taken" HorizontalAlignment="Left" Margin="29,426,0,0" VerticalAlignment="Top" Height="23" Width="202"/>
 
         <!--Test Textbox for working with array values.-->
-        <!--<TextBox x:Name="test_txtBox" HorizontalAlignment="Center" Height="23" Margin="0,250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>-->
+        <TextBox x:Name="test_txtBox" HorizontalAlignment="Center" Height="22" Margin="623,424,49,127" TextWrapping="Wrap" Text="How many Lotteries?" VerticalAlignment="Center" Width="120"/>
 
     </Grid>
 </Window>
