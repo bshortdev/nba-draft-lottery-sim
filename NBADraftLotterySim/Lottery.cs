@@ -40,8 +40,11 @@ namespace NBADraftLotterySim
 
         public int[] lottoBalls = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
 
+        public int outcomes { get; set; }
+
         public Lottery (int year)
         {
+            outcomes = 0;
             picks = new Team[] {firstPick, secondPick, thirdPick, fourthPick, fifthPick, sixthPick, seventhPick, eighthPick, ninthPick, tenthPick, eleventhPick, twelfthPick, thirteenthPick, fourteenthPick };
             createLotto(year);
         }
