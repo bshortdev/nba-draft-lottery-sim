@@ -39,14 +39,31 @@ namespace NBADraftLotterySim
 
             for(int i = 0; i < runs; i++)
             {
-                results.results.Add(new Lottery(2015));
+                Lottery lotto = new Lottery(2015);
+                bool incOutcomes = false;
+                int whereToInc = 0;
+                for(int j = 0; j < results.results.Count; j++)
+                {
+                    if (lotto.isEqual(results.results[j]))
+                    {
+                        incOutcomes = true;
+                        whereToInc = j;
+                    }
+                }
+                if (incOutcomes)
+                {
+                    results.results[whereToInc].addOutcome();
+                }
+                else
+                {
+                    results.results.Add(lotto);
+                }
             }
 
-            // Create new Lottery.
-            //Lottery newLotto = new Lottery(2015);
+            results.sortResults();
 
             // Print the Lottery
-            mainLabel.Content = results.results[0].printLottery();
+            mainLabel.Content = results.results[0].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[0].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
             
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.
