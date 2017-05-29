@@ -44,9 +44,23 @@ namespace NBADraftLotterySim
 
         public Lottery (int year)
         {
-            outcomes = 0;
-            picks = new Team[] {firstPick, secondPick, thirdPick, fourthPick, fifthPick, sixthPick, seventhPick, eighthPick, ninthPick, tenthPick, eleventhPick, twelfthPick, thirteenthPick, fourteenthPick };
+            outcomes = 1;
+            picks = new Team[14];
             createLotto(year);
+            firstPick = picks[0];
+            secondPick = picks[1];
+            thirdPick = picks[2];
+            fourthPick = picks[3];
+            fifthPick = picks[4];
+            sixthPick = picks[5];
+            seventhPick = picks[6];
+            eighthPick = picks[7];
+            ninthPick = picks[8];
+            tenthPick = picks[9];
+            eleventhPick = picks[10];
+            twelfthPick = picks[11];
+            thirteenthPick = picks[12];
+            fourteenthPick = picks[13];
         }
 
         // Creates the Draft Lottery
@@ -96,6 +110,22 @@ namespace NBADraftLotterySim
                 }
                 picks[j] = lotto2015[k];
             }
+        }
+
+        public void addOutcome()
+        {
+            outcomes++;
+        }
+
+        // Create a true comparison method
+        public bool isEqual(Lottery compareTo)
+        {
+            bool result = false;
+            if((this.firstPick.teamName.Equals(compareTo.firstPick.teamName)) && (this.secondPick.teamName.Equals(compareTo.secondPick.teamName)) && (this.thirdPick.teamName.Equals(compareTo.thirdPick.teamName)) && (this.fourthPick.teamName.Equals(compareTo.fourthPick.teamName)) && (this.fifthPick.teamName.Equals(compareTo.fifthPick.teamName)) && (this.sixthPick.teamName.Equals(compareTo.sixthPick.teamName)) && (this.seventhPick.teamName.Equals(compareTo.seventhPick.teamName)) && (this.eighthPick.teamName.Equals(compareTo.eighthPick.teamName)) && (this.ninthPick.teamName.Equals(compareTo.ninthPick.teamName)) && (this.tenthPick.teamName.Equals(compareTo.tenthPick.teamName)) && (this.eleventhPick.teamName.Equals(compareTo.eleventhPick.teamName)) && (this.twelfthPick.teamName.Equals(compareTo.twelfthPick.teamName)) && (this.thirteenthPick.teamName.Equals(compareTo.thirteenthPick.teamName)) && (this.fourteenthPick.teamName.Equals(compareTo.fourteenthPick.teamName)))
+            {
+                result = true;
+            }
+            return result;
         }
 
         // Saves the lottery to a string
