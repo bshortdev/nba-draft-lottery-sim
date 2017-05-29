@@ -8,11 +8,21 @@
         Title="NBA Draft Lottery Simulator" Height="600" Width="800">
     <Grid>
         <Button x:Name="lottoGenBtn" Content="Generate Lottery" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Center" Click="lottoGenBtn_Click"/>
-        <Label x:Name="mainLabel" Content="Click the button below to determine a Draft Lottery outcome" Margin="146,33,146,280" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="260"/>
+        <Label x:Name="mainLabel" Margin="146,33,146,280" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="260"/>
         <Label x:Name="timerLbl" Content="Time Taken" HorizontalAlignment="Left" Margin="29,426,0,0" VerticalAlignment="Top" Height="23" Width="202"/>
 
         <!--Test Textbox for working with array values.-->
         <TextBox x:Name="test_txtBox" HorizontalAlignment="Center" Height="22" Margin="623,424,49,127" TextWrapping="Wrap" Text="How many Lotteries?" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="mostLikeBtn" Content="Most Likely" HorizontalAlignment="Left" Margin="29,38,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Margin="29,63,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy1" Content="Button" HorizontalAlignment="Left" Margin="29,88,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy2" Content="Button" HorizontalAlignment="Left" Margin="29,113,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy3" Content="Button" HorizontalAlignment="Left" Margin="29,138,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy4" Content="Button" HorizontalAlignment="Left" Margin="29,163,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy5" Content="Button" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy6" Content="Button" HorizontalAlignment="Left" Margin="29,213,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy7" Content="Button" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy8" Content="Button" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
