@@ -13,16 +13,16 @@
 
         <!--Test Textbox for working with array values.-->
         <TextBox x:Name="test_txtBox" HorizontalAlignment="Center" Height="22" Margin="623,424,49,127" TextWrapping="Wrap" Text="How many Lotteries?" VerticalAlignment="Center" Width="120"/>
-        <Button x:Name="mostLikeBtn" Content="Most Likely" HorizontalAlignment="Left" Margin="29,38,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="twoLikeBtn" Content="2nd Likeliest" HorizontalAlignment="Left" Margin="29,63,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="threeLikeBtn" Content="3rd Likeliest" HorizontalAlignment="Left" Margin="29,88,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="fourLikeBtn" Content="4th Likeliest" HorizontalAlignment="Left" Margin="29,113,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="fiveLikeBtn" Content="5th Likeliest" HorizontalAlignment="Left" Margin="29,138,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="sixLikeBtn" Content="6th Likeliest" HorizontalAlignment="Left" Margin="29,163,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="sevenLikeBtn" Content="7th Likeliest" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="eightLikeBtn" Content="8th Likeliest" HorizontalAlignment="Left" Margin="29,213,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="nineLikeBtn" Content="9th Likeliest" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="tenLikeBtn" Content="10th Likeliest" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="mostLikeBtn" Content="Most Likely" HorizontalAlignment="Left" Margin="29,38,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="mostLikeBtn_Click"/>
+        <Button x:Name="twoLikeBtn" Content="2nd Likeliest" HorizontalAlignment="Left" Margin="29,63,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="twoLikeBtn_Click"/>
+        <Button x:Name="threeLikeBtn" Content="3rd Likeliest" HorizontalAlignment="Left" Margin="29,88,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="threeLikeBtn_Click"/>
+        <Button x:Name="fourLikeBtn" Content="4th Likeliest" HorizontalAlignment="Left" Margin="29,113,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="fourLikeBtn_Click"/>
+        <Button x:Name="fiveLikeBtn" Content="5th Likeliest" HorizontalAlignment="Left" Margin="29,138,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="fiveLikeBtn_Click"/>
+        <Button x:Name="sixLikeBtn" Content="6th Likeliest" HorizontalAlignment="Left" Margin="29,163,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="sixLikeBtn_Click"/>
+        <Button x:Name="sevenLikeBtn" Content="7th Likeliest" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="sevenLikeBtn_Click"/>
+        <Button x:Name="eightLikeBtn" Content="8th Likeliest" HorizontalAlignment="Left" Margin="29,213,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="eightLikeBtn_Click"/>
+        <Button x:Name="nineLikeBtn" Content="9th Likeliest" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="nineLikeBtn_Click"/>
+        <Button x:Name="tenLikeBtn" Content="10th Likeliest" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="tenLikeBtn_Click"/>
 
     </Grid>
 </Window>

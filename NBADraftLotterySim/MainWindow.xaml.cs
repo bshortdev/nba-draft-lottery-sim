@@ -21,6 +21,9 @@ namespace NBADraftLotterySim
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private LotteryResults results = new LotteryResults();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,9 +39,7 @@ namespace NBADraftLotterySim
 
             // Grab number of text box
             int runs = Convert.ToInt32(test_txtBox.Text);
-
-            LotteryResults results = new LotteryResults();
-
+            
             for(int i = 0; i < runs; i++)
             {
                 Lottery lotto = new Lottery(2015);
@@ -73,8 +74,7 @@ namespace NBADraftLotterySim
                 setButtons(results.results.Count);
             }
 
-            // Print the Lottery
-            mainLabel.Content = results.results[0].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[0].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            mainLabel.Content = "Your lottery has been generated. Click a button on the left to see a result.";
             
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.
@@ -140,6 +140,56 @@ namespace NBADraftLotterySim
             {
                 setButtons(num - 1);
             }
+        }
+
+        private void mostLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[0].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[0].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void twoLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[1].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[1].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void threeLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[2].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[2].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void fourLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[3].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[3].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void fiveLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[4].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[4].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void sixLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[5].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[5].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void sevenLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[6].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[6].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void eightLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[7].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[7].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void nineLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[8].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[8].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+        }
+
+        private void tenLikeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainLabel.Content = results.results[9].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[9].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
         }
     }
 }
