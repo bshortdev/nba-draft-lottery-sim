@@ -32,6 +32,8 @@ namespace NBADraftLotterySim
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
+            offButtons();
+
             // Grab number of text box
             int runs = Convert.ToInt32(test_txtBox.Text);
 
@@ -62,6 +64,15 @@ namespace NBADraftLotterySim
 
             results.sortResults();
 
+            if(results.results.Count >= 10)
+            {
+                setButtons(10);
+            }
+            else
+            {
+                setButtons(results.results.Count);
+            }
+
             // Print the Lottery
             mainLabel.Content = results.results[0].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[0].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
             
@@ -75,5 +86,60 @@ namespace NBADraftLotterySim
                 ts.Milliseconds / 10);
             timerLbl.Content = "RunTime: " + elapsedTime;
         }        
+
+        private void offButtons()
+        {
+            mostLikeBtn.IsEnabled = false;
+            twoLikeBtn.IsEnabled = false;
+            threeLikeBtn.IsEnabled = false;
+            fourLikeBtn.IsEnabled = false;
+            fiveLikeBtn.IsEnabled = false;
+            sixLikeBtn.IsEnabled = false;
+            sevenLikeBtn.IsEnabled = false;
+            eightLikeBtn.IsEnabled = false;
+            nineLikeBtn.IsEnabled = false;
+            tenLikeBtn.IsEnabled = false;
+        }
+
+        private void setButtons(int num)
+        {
+            switch(num)
+            {
+                case 1:
+                    mostLikeBtn.IsEnabled = true;
+                    break;
+                case 2:
+                    twoLikeBtn.IsEnabled = true;
+                    break;
+                case 3:
+                    threeLikeBtn.IsEnabled = true;
+                    break;
+                case 4:
+                    fourLikeBtn.IsEnabled = true;
+                    break;
+                case 5:
+                    fiveLikeBtn.IsEnabled = true;
+                    break;
+                case 6:
+                    sixLikeBtn.IsEnabled = true;
+                    break;
+                case 7:
+                    sevenLikeBtn.IsEnabled = true;
+                    break;
+                case 8:
+                    eightLikeBtn.IsEnabled = true;
+                    break;
+                case 9:
+                    nineLikeBtn.IsEnabled = true;
+                    break;
+                case 10:
+                    tenLikeBtn.IsEnabled = true;
+                    break;
+            }
+            if(num > 1)
+            {
+                setButtons(num - 1);
+            }
+        }
     }
 }
