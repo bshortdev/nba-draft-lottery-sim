@@ -21,8 +21,9 @@ namespace NBADraftLotterySim
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        private LotteryResults results = new LotteryResults();
+        private LotteryResults results;
+        private int lotteryYear = 2015;
+        private int realLottoIndex, realLottoTimes;
 
         public MainWindow()
         {
@@ -31,6 +32,8 @@ namespace NBADraftLotterySim
 
         private void lottoGenBtn_Click(object sender, RoutedEventArgs e)
         {
+            results = new LotteryResults();
+            realLottoIndex = -1;
             // Timer to track amount of time has passed.
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -42,7 +45,7 @@ namespace NBADraftLotterySim
             
             for(int i = 0; i < runs; i++)
             {
-                Lottery lotto = new Lottery(2015);
+                Lottery lotto = new Lottery(lotteryYear);
                 bool incOutcomes = false;
                 int whereToInc = 0;
                 for(int j = 0; j < results.results.Count; j++)
@@ -74,6 +77,26 @@ namespace NBADraftLotterySim
                 setButtons(results.results.Count);
             }
 
+            for(int i = 0; i < results.results.Count; i++)
+            {
+                if (results.results[i].isEqual(Years.getTrueLottery(lotteryYear)))
+                {
+                    realLottoIndex = i;
+                    break;
+                }
+            }
+
+            if(realLottoIndex == -1)
+            {
+                realLottoTimes = 0;
+            }
+            else
+            {
+                realLottoTimes = results.results[realLottoIndex].outcomes;
+            }
+
+            actLottoBtn.IsEnabled = true;
+
             mainLabel.Content = "Your lottery has been generated. Click a button on the left to see a result.";
             
             stopWatch.Stop();
@@ -99,6 +122,7 @@ namespace NBADraftLotterySim
             eightLikeBtn.IsEnabled = false;
             nineLikeBtn.IsEnabled = false;
             tenLikeBtn.IsEnabled = false;
+            actLottoBtn.IsEnabled = false;
         }
 
         private void setButtons(int num)
@@ -145,51 +169,98 @@ namespace NBADraftLotterySim
         private void mostLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[0].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[0].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if(results.results[0].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void twoLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[1].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[1].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[1].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void threeLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[2].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[2].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[2].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void fourLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[3].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[3].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[3].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void fiveLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[4].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[4].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[4].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void sixLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[5].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[5].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[5].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void sevenLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[6].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[6].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[6].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void eightLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[7].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[7].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[7].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void nineLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[8].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[8].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[8].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
 
         private void tenLikeBtn_Click(object sender, RoutedEventArgs e)
         {
             mainLabel.Content = results.results[9].printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + results.results[9].outcomes + " times." + Environment.NewLine + Environment.NewLine + "There are a total of " + results.results.Count + " results.";
+            if (results.results[9].isEqual(Years.getTrueLottery(lotteryYear)))
+            {
+                mainLabel.Content += Environment.NewLine + Environment.NewLine + "This is the actual Lottery result of the " + lotteryYear + " Draft Lottery!";
+            }
         }
+
+        private void actLottoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            decimal percent = (realLottoTimes / results.results.Count) * 100;
+            mainLabel.Content = Years.getTrueLottery(lotteryYear).printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + realLottoTimes + " times." + Environment.NewLine + Environment.NewLine + "This lottery happened " + Math.Round(percent,2) + "% of the time.";
+        }
+
     }
 }

@@ -63,6 +63,25 @@ namespace NBADraftLotterySim
             fourteenthPick = picks[13];
         }
 
+        public Lottery(Team[] teams)
+        {
+            picks = teams;
+            firstPick = picks[0];
+            secondPick = picks[1];
+            thirdPick = picks[2];
+            fourthPick = picks[3];
+            fifthPick = picks[4];
+            sixthPick = picks[5];
+            seventhPick = picks[6];
+            eighthPick = picks[7];
+            ninthPick = picks[8];
+            tenthPick = picks[9];
+            eleventhPick = picks[10];
+            twelfthPick = picks[11];
+            thirteenthPick = picks[12];
+            fourteenthPick = picks[13];
+        }
+
         // Creates the Draft Lottery
         private void createLotto(int year)
         {

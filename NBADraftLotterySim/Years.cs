@@ -24,6 +24,21 @@ namespace NBADraftLotterySim
                 new Team("Phoenix Suns", 6, 13),
                 new Team("Oklahoma City Thunder", 5, 14) };
 
+        private static Team[] actual2015 = new Team[] { new Team("Minnesota Timberwolves"),
+                new Team("Los Angeles Lakers"),
+                new Team("Philadelphia 76ers"),
+                new Team("New York Knicks"),
+                new Team("Orlando Magic"),
+                new Team("Sacramento Kings"),
+                new Team("Denver Nuggets"),
+                new Team("Detroit Pistons"),
+                new Team("Charlotte Hornets"),
+                new Team("Miami Heat"),
+                new Team("Indiana Pacers"),
+                new Team("Utah Jazz"),
+                new Team("Phoenix Suns"),
+                new Team("Oklahoma City Thunder")};
+
         public Years(int year)
         {
             if(year == 2015)
@@ -35,6 +50,18 @@ namespace NBADraftLotterySim
         public void setTeams(Team[] teams)
         {
             chosenLotto = teams;
+        }
+
+        public static Lottery getTrueLottery(int year)
+        {
+            if(year == 2015)
+            {
+                return new Lottery(actual2015);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

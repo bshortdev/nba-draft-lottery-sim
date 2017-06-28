@@ -23,6 +23,7 @@
         <Button x:Name="eightLikeBtn" Content="8th Likeliest" HorizontalAlignment="Left" Margin="29,213,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="eightLikeBtn_Click"/>
         <Button x:Name="nineLikeBtn" Content="9th Likeliest" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="nineLikeBtn_Click"/>
         <Button x:Name="tenLikeBtn" Content="10th Likeliest" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="tenLikeBtn_Click"/>
+        <Button x:Name="actLottoBtn" Content="Actual Lottery" HorizontalAlignment="Left" Margin="29,288,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="actLottoBtn_Click"/>
 
     </Grid>
 </Window>
