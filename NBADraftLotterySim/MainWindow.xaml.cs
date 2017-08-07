@@ -24,6 +24,7 @@ namespace NBADraftLotterySim
         private LotteryResults results;
         private int lotteryYear = 2015;
         private int realLottoIndex, realLottoTimes;
+        private int runs;
 
         public MainWindow()
         {
@@ -41,7 +42,7 @@ namespace NBADraftLotterySim
             offButtons();
 
             // Grab number of text box
-            int runs = Convert.ToInt32(test_txtBox.Text);
+            runs = Convert.ToInt32(test_txtBox.Text);
             
             for(int i = 0; i < runs; i++)
             {
@@ -258,8 +259,8 @@ namespace NBADraftLotterySim
 
         private void actLottoBtn_Click(object sender, RoutedEventArgs e)
         {
-            decimal percent = (realLottoTimes / results.results.Count) * 100;
-            mainLabel.Content = Years.getTrueLottery(lotteryYear).printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + realLottoTimes + " times." + Environment.NewLine + Environment.NewLine + "This lottery happened " + Math.Round(percent,2) + "% of the time.";
+            double percent = ((double)realLottoTimes / runs) * 100;
+            mainLabel.Content = Years.getTrueLottery(lotteryYear).printLottery() + Environment.NewLine + Environment.NewLine + "This Lottery happened " + realLottoTimes + " times." + Environment.NewLine + Environment.NewLine + "This lottery happened " + Math.Round(percent,5) + "% of the time.";
         }
 
     }
