@@ -18,5 +18,10 @@ namespace NBADraftLotterySim
             lotteryOdds = odds;
             standing = rank;
         }
+
+        public Team(string name)
+        {
+            teamName = name;
+        }
     }
 }

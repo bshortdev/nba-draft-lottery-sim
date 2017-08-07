@@ -8,7 +8,7 @@
         Title="NBA Draft Lottery Simulator" Height="600" Width="800">
     <Grid>
         <Button x:Name="lottoGenBtn" Content="Generate Lottery" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Center" Click="lottoGenBtn_Click" IsDefault="True"/>
-        <Label x:Name="mainLabel" Margin="146,33,146,280" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="260" Content="Enter how many Lotteries to generate below, then click &quot;Generate Lottery&quot;"/>
+        <Label x:Name="mainLabel" Margin="146,33,146,186" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="354" Content="Enter how many Lotteries to generate below, then click &quot;Generate Lottery&quot;"/>
         <Label x:Name="timerLbl" Content="Time Taken" HorizontalAlignment="Left" Margin="29,426,0,0" VerticalAlignment="Top" Height="23" Width="202"/>
 
         <!--Test Textbox for working with array values.-->
@@ -23,6 +23,7 @@
         <Button x:Name="eightLikeBtn" Content="8th Likeliest" HorizontalAlignment="Left" Margin="29,213,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="eightLikeBtn_Click"/>
         <Button x:Name="nineLikeBtn" Content="9th Likeliest" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="nineLikeBtn_Click"/>
         <Button x:Name="tenLikeBtn" Content="10th Likeliest" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="tenLikeBtn_Click"/>
+        <Button x:Name="actLottoBtn" Content="Actual Lottery" HorizontalAlignment="Left" Margin="29,288,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="actLottoBtn_Click"/>
 
     </Grid>
 </Window>
