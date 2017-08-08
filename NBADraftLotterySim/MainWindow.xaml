@@ -24,6 +24,7 @@
         <Button x:Name="nineLikeBtn" Content="9th Likeliest" HorizontalAlignment="Left" Margin="29,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="nineLikeBtn_Click"/>
         <Button x:Name="tenLikeBtn" Content="10th Likeliest" HorizontalAlignment="Left" Margin="29,263,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="tenLikeBtn_Click"/>
         <Button x:Name="actLottoBtn" Content="Actual Lottery" HorizontalAlignment="Left" Margin="29,288,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="actLottoBtn_Click"/>
+        <ProgressBar x:Name="lotteryProgress" HorizontalAlignment="Left" Height="24" Margin="29,496,0,0" VerticalAlignment="Top" Width="714"/>
 
     </Grid>
 </Window>
