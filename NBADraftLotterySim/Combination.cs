@@ -150,9 +150,9 @@ namespace NBADraftLotterySim
         {
             bool found = false;
 
-            foreach(Combination c in list)
+            foreach (Combination c in list)
             {
-                if(Combination.equalCombination(combo, c))
+                if (Combination.equalCombination(combo, c))
                 {
                     found = true;
                     break;
@@ -177,7 +177,7 @@ namespace NBADraftLotterySim
         private static bool findValue(int value, Combination combo)
         {
             bool isValue = false;
-            if(value == combo.firstVal || value == combo.secondVal || value == combo.thirdVal || value == combo.fourthVal)
+            if (value == combo.firstVal || value == combo.secondVal || value == combo.thirdVal || value == combo.fourthVal)
             {
                 isValue = true;
             }
