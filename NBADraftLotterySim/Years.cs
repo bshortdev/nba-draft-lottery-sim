@@ -9,6 +9,135 @@ namespace NBADraftLotterySim
     class Years
     {
         public Team[] chosenLotto { get; set; }
+
+        private Team[] lottery2010 = new Team[] {
+            new Team("New Jersey Nets", 250, 1),
+                new Team("Minnesota Timberwolves", 199, 2),
+                new Team("Sacramento Kings", 156, 3),
+                new Team("Golden State Warriors", 104, 4),
+                new Team("Washington Wizards", 103, 5),
+                new Team("Philadelphia 76ers", 53, 6),
+                new Team("Detroit Pistons", 53, 7),
+                new Team("Los Angeles Clippers", 23, 8),
+                new Team("New York Knicks", 22, 9),
+                new Team("Indiana Pacers", 11, 10),
+                new Team("New Orleans Hornets", 8, 11),
+                new Team("Memphis Grizzlies", 7, 12),
+                new Team("Toronto Raptors", 6, 13),
+                new Team("Houston Rockets", 5, 14) };
+
+        private static Team[] actual2010 = new Team[] {
+            new Team("Washington Wizards"),
+                new Team("Philadelphia 76ers"),
+                new Team("New Jersey Nets"),
+                new Team("Minnesota Timberwolves"),
+                new Team("Sacramento Kings"),
+                new Team("Golden State Warriors"),
+                new Team("Detroit Pistons"),
+                new Team("Los Angeles Clippers"),
+                new Team("Utah Jazz"),
+                new Team("Indiana Pacers"),
+                new Team("New Orleans Hornets"),
+                new Team("Memphis Grizzlies"),
+                new Team("Toronto Raptors"),
+                new Team("Houston Rockets")};
+
+        private Team[] lottery2011 = new Team[] {
+            new Team("Minnesota Timberwolves", 250, 1),
+                new Team("Cleveland Cavaliers", 199, 2),
+                new Team("Toronto Raptors", 156, 3),
+                new Team("Washington Wizards", 119, 4),
+                new Team("Sacramento Kings", 76, 5),
+                new Team("Utah Jazz", 75, 6),
+                new Team("Detroit Pistons", 43, 7),
+                new Team("Cleveland Cavaliers", 28, 8),
+                new Team("Charlotte Bobcats", 17, 9),
+                new Team("Milwaukee Bucks", 11, 10),
+                new Team("Golden State Warriors", 8, 11),
+                new Team("Utah Jazz", 7, 12),
+                new Team("Phoneix Suns", 6, 13),
+                new Team("Houston Rockets", 5, 14) };
+
+        private static Team[] actual2011 = new Team[] {
+            new Team("Cleveland Cavaliers"),
+                new Team("Minnesota Timberwolves"),
+                new Team("Utah Jazz"),
+                new Team("Cleveland Cavaliers"),
+                new Team("Toronto Raptors"),
+                new Team("Washington Wizards"),
+                new Team("Sacramento Kings"),
+                new Team("Detroit Pistons"),
+                new Team("Charlotte Bobcats"),
+                new Team("Milwaukee Bucks"),
+                new Team("Golden State Warriors"),
+                new Team("Utah Jazz"),
+                new Team("Phoenix Suns"),
+                new Team("Houston Rockets")};
+
+        private Team[] lottery2012 = new Team[] {
+            new Team("Charlotte Bobcats", 250, 1),
+                new Team("Washington Wizards", 199, 2),
+                new Team("Cleveland Cavaliers", 138, 3),
+                new Team("New Orleans Hornets", 137, 4),
+                new Team("Sacramento Kings", 76, 5),
+                new Team("Portland Trail Blazers", 75, 6),
+                new Team("Golden State Warriors", 36, 7),
+                new Team("Toronto Raptors", 35, 8),
+                new Team("Detroit Pistons", 17, 9),
+                new Team("Minnesota Timberwolves", 11, 10),
+                new Team("Portland Trail Blazers", 8, 11),
+                new Team("Milwaukee Bucks", 7, 12),
+                new Team("Phoneix Suns", 6, 13),
+                new Team("Houston Rockets", 5, 14) };
+
+        private static Team[] actual2012 = new Team[] {
+            new Team("New Orleans Hornets"),
+                new Team("Charlotte Bobcats"),
+                new Team("Washington Wizards"),
+                new Team("Cleveland Cavaliers"),
+                new Team("Sacramento Kings"),
+                new Team("Portland Trail Blazers"),
+                new Team("Golden State Warriors"),
+                new Team("Toronto Raptors"),
+                new Team("Detroit Pistons"),
+                new Team("New Orleans Hornets"),
+                new Team("Portland Trail Blazers"),
+                new Team("Milwaukee Bucks"),
+                new Team("Phoenix Suns"),
+                new Team("Houston Rockets")};
+
+        private Team[] lottery2013 = new Team[] {
+            new Team("Orlando Magic", 250, 1),
+                new Team("Charlotte Bobcats", 199, 2),
+                new Team("Cleveland Cavaliers", 156, 3),
+                new Team("Phoenix Suns", 119, 4),
+                new Team("New Orleans Pelicans", 88, 5),
+                new Team("Sacramento Kings", 63, 6),
+                new Team("Detroit Pistons", 36, 7),
+                new Team("Washington Wizards", 35, 8),
+                new Team("Minnesota Timberwolves", 17, 9),
+                new Team("Portland Trail Blazers", 11, 10),
+                new Team("Philadelphia 76ers", 8, 11),
+                new Team("Oklahoma City Thunder", 7, 12),
+                new Team("Dallas Mavericks", 6, 13),
+                new Team("Utah Jazz", 5, 14) };
+
+        private static Team[] actual2013 = new Team[] {
+            new Team("Cleveland Cavaliers"),
+                new Team("Orlando Magic"),
+                new Team("Washington Wizards"),
+                new Team("Charlotte Bobcats"),
+                new Team("Phoenix Suns"),
+                new Team("New Orleans Pelicans"),
+                new Team("Sacramento Kings"),
+                new Team("Detroit Pistons"),
+                new Team("Minnesota Timberwolves"),
+                new Team("Portland Trail Blazers"),
+                new Team("Philadelphia 76ers"),
+                new Team("Oklahoma City Thunder"),
+                new Team("Dallas Mavericks"),
+                new Team("Utah Jazz")};
+
         private Team[] lottery2014 = new Team[] {
             new Team("Milwaukee Bucks", 250, 1),
                 new Team("Philadephia 76ers", 199, 2),
@@ -40,6 +169,7 @@ namespace NBADraftLotterySim
                 new Team("Orlando Magic"),
                 new Team("Minnesota Timberwolves"),
                 new Team("Phoenix Suns")};
+
         private Team[] lottery2015 = new Team[] {
             new Team("Minnesota Timberwolves", 250, 1),
                 new Team("New York Knicks", 199, 2),
